@@ -1,11 +1,45 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-surface-200 py-10 mt-auto">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <p class="text-sm font-semibold text-surface-900 font-display">Your New Business</p>
-      <p class="text-sm text-surface-800/50">&copy; {year} Your New Business. All rights reserved.</p>
+<footer style="background: oklch(0.12 0.035 35); border-top: 1px solid oklch(0.22 0.030 38);">
+  <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 py-12">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+      <!-- Brand -->
+      <div>
+        <a href="/" class="flex items-center gap-2.5 mb-3">
+          <svg class="w-5 h-5 flex-shrink-0" style="color: oklch(0.72 0.12 52);" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/>
+          </svg>
+          <span class="font-display font-bold text-base tracking-tight" style="color: oklch(0.96 0.015 72);">Brewnest</span>
+        </a>
+        <p class="text-sm leading-relaxed max-w-xs font-light" style="color: oklch(0.50 0.02 60); font-family: var(--font-body);">
+          Your coffee shop ritual, delivered to your door. Freshly roasted specialty coffee, barista guides, and seasonal café recipes.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="flex flex-col sm:flex-row gap-8 sm:gap-12">
+        <div>
+          <p class="text-xs font-semibold tracking-[0.15em] uppercase mb-3" style="color: oklch(0.62 0.12 52); font-family: var(--font-body);">Membership</p>
+          <ul class="space-y-2">
+            <li><a href="#how-it-works" class="text-sm transition-colors duration-150" style="color: oklch(0.55 0.02 60); font-family: var(--font-body);" onmouseover="this.style.color='oklch(0.80 0.10 55)'" onmouseout="this.style.color='oklch(0.55 0.02 60)'">How it works</a></li>
+            <li><a href="#join" class="text-sm transition-colors duration-150" style="color: oklch(0.55 0.02 60); font-family: var(--font-body);" onmouseover="this.style.color='oklch(0.80 0.10 55)'" onmouseout="this.style.color='oklch(0.55 0.02 60)'">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs font-semibold tracking-[0.15em] uppercase mb-3" style="color: oklch(0.62 0.12 52); font-family: var(--font-body);">Company</p>
+          <ul class="space-y-2">
+            <li><a href="/blog" class="text-sm transition-colors duration-150" style="color: oklch(0.55 0.02 60); font-family: var(--font-body);" onmouseover="this.style.color='oklch(0.80 0.10 55)'" onmouseout="this.style.color='oklch(0.55 0.02 60)'">Blog</a></li>
+            <li><a href="mailto:hello@brewnest.co" class="text-sm transition-colors duration-150" style="color: oklch(0.55 0.02 60); font-family: var(--font-body);" onmouseover="this.style.color='oklch(0.80 0.10 55)'" onmouseout="this.style.color='oklch(0.55 0.02 60)'">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-10 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2" style="border-top: 1px solid oklch(0.20 0.025 36);">
+      <p class="text-xs" style="color: oklch(0.38 0.015 50); font-family: var(--font-body);">&copy; {year} Brewnest. All rights reserved.</p>
+      <p class="text-xs" style="color: oklch(0.38 0.015 50); font-family: var(--font-body);">Made with care for home baristas everywhere.</p>
     </div>
   </div>
 </footer>

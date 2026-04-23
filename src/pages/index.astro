@@ -1,35 +1,430 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Your New Business" description="at home coffee shop delivery system in united states">
-  <!-- Hero — the Product Agent will replace this entire page -->
-  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 via-surface-50 to-brand-500/10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-surface-900 font-display max-w-4xl mx-auto leading-[1.1] animate-slide-up">
-        Your New Business
-      </h1>
-      <p class="mt-6 text-lg md:text-xl text-surface-800/60 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-100">
-        at home coffee shop delivery system in united states
+<Base
+  title="Brewnest — Your Coffee Shop Ritual, Delivered Home"
+  description="Brewnest delivers freshly roasted specialty coffee, barista recipes, and café-style guides so every morning at home feels like your favorite café."
+>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO — Immersive espresso-dark, warm glowing gradients
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="hero-section noise-overlay relative min-h-[92vh] flex items-center overflow-hidden">
+    <!-- Layered gradient background: morning light through café window -->
+    <div class="absolute inset-0" style="
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 20%, oklch(0.62 0.12 52 / 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 55% 45% at 15% 75%, oklch(0.45 0.08 42 / 0.22) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 55% at 85% 80%, oklch(0.55 0.10 48 / 0.12) 0%, transparent 55%),
+        linear-gradient(165deg, oklch(0.14 0.038 36) 0%, oklch(0.18 0.042 38) 45%, oklch(0.22 0.048 40) 100%);
+      mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    "></div>
+
+    <!-- Steam wisps — purely decorative SVG -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden" style="z-index:1;">
+      <svg class="absolute bottom-24 left-1/2 -translate-x-16 w-32 h-48 opacity-10" viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 110 C30 90 50 75 40 55 C30 35 50 20 40 0" stroke="oklch(0.96 0.015 72)" stroke-width="2" stroke-linecap="round" class="animate-steam"/>
+        <path d="M60 110 C50 85 70 70 58 48 C48 28 65 15 55 0" stroke="oklch(0.96 0.015 72)" stroke-width="1.5" stroke-linecap="round" class="animate-steam delay-300" style="animation-delay:0.8s;"/>
+        <path d="M22 110 C15 88 35 72 25 52 C16 34 32 18 22 0" stroke="oklch(0.96 0.015 72)" stroke-width="1.5" stroke-linecap="round" class="animate-steam delay-200" style="animation-delay:1.4s;"/>
+      </svg>
+    </div>
+
+    <div class="relative max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 py-28 md:py-36" style="z-index:2;">
+      <!-- Eyebrow -->
+      <p class="animate-fade-in text-sm font-semibold tracking-[0.18em] uppercase mb-6" style="color: oklch(0.72 0.12 52);">
+        At-Home Coffee Membership
       </p>
-      <div class="mt-10 animate-slide-up delay-200">
-        <a href="#cta" class="inline-block px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-base">
-          Get Started
+
+      <!-- Hero headline — Playfair Display, dramatic scale -->
+      <h1 class="animate-slide-up font-display font-bold leading-[1.08] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-3xl" style="color: oklch(0.96 0.015 72);">
+        Your coffee shop ritual,<br>
+        <em class="not-italic" style="color: oklch(0.80 0.10 55);">delivered to your door.</em>
+      </h1>
+
+      <!-- Sub -->
+      <p class="animate-slide-up delay-200 mt-8 text-lg md:text-xl leading-relaxed max-w-xl font-light" style="color: oklch(0.80 0.015 72); font-family: var(--font-body);">
+        Freshly roasted specialty beans, barista recipes, and café-style guides — so every morning at home feels like your favorite café.
+      </p>
+
+      <!-- CTAs -->
+      <div class="animate-slide-up delay-400 mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="#join"
+           class="inline-block px-8 py-4 font-semibold text-base rounded-sm transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
+           style="background: oklch(0.62 0.12 52); color: oklch(0.12 0.035 35); font-family: var(--font-body);">
+          Start my first box — $39
         </a>
+        <a href="#how-it-works"
+           class="inline-flex items-center gap-2 text-sm font-medium transition-colors duration-150"
+           style="color: oklch(0.72 0.08 60);">
+          See how it works
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+
+      <!-- Social proof micro-line -->
+      <p class="animate-fade-in delay-600 mt-8 text-xs font-medium tracking-wide" style="color: oklch(0.55 0.02 60);">
+        ★★★★★ &nbsp;Loved by 4,200+ home baristas across the US · Free shipping · Cancel anytime
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ORIGIN STORY — Editorial asymmetric layout, drop cap
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-24 md:py-32" style="background: oklch(0.96 0.015 72);">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10">
+      <!-- Section label -->
+      <div class="flex items-center gap-4 mb-12">
+        <span class="amber-rule"></span>
+        <span class="text-xs font-semibold tracking-[0.2em] uppercase" style="color: oklch(0.62 0.12 52); font-family: var(--font-body);">Our Story</span>
+      </div>
+
+      <div class="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-16 items-start">
+        <!-- Left: Pull headline -->
+        <div class="md:pt-2">
+          <h2 class="font-display font-bold text-3xl md:text-4xl leading-tight" style="color: oklch(0.18 0.040 38);">
+            The café morning you love — now yours to keep.
+          </h2>
+          <!-- Decorative quote mark -->
+          <p class="mt-8 font-display italic text-5xl leading-none select-none" style="color: oklch(0.86 0.018 70);">"</p>
+          <p class="font-display italic text-lg leading-relaxed" style="color: oklch(0.45 0.060 38);">
+            The best part of my day used to be walking into the café. Now it's the ten minutes I spend at my own counter.
+          </p>
+          <p class="mt-3 text-sm font-medium" style="color: oklch(0.62 0.12 52); font-family: var(--font-body);">
+            — Maya T., subscriber since 2023
+          </p>
+        </div>
+
+        <!-- Right: Story body with drop cap -->
+        <div>
+          <p class="drop-cap font-body text-lg leading-[1.85] mb-6" style="color: oklch(0.28 0.030 38);">
+            here's a specific kind of morning that most of us know: the café down the street, the ritual of ordering your usual, the way the smell hits you at the door. Then, somewhere along the way — a move, a new schedule, or just the math of $8 a day — that morning got harder to keep.
+          </p>
+          <p class="text-lg leading-[1.85] mb-6" style="color: oklch(0.28 0.030 38); font-family: var(--font-body);">
+            Brewnest exists because a bag of beans wasn't the answer. We built a membership that sends you everything a great café morning actually requires: freshly roasted single-origin coffee from our partner roasters, the exact barista technique that makes it sing, and a new seasonal drink recipe every month inspired by independent cafés we love.
+          </p>
+          <p class="text-lg leading-[1.85]" style="color: oklch(0.28 0.030 38); font-family: var(--font-body);">
+            Not a coffee startup. Not a subscription box. A ritual, delivered.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="py-20 md:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl bg-brand-500 p-10 md:p-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white font-display">Ready to get started?</h2>
-        <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">Get in touch and see what we can do for you.</p>
-        <a href="mailto:hello@example.com" class="mt-8 inline-block px-8 py-3.5 bg-white text-surface-900 font-semibold rounded-lg hover:bg-surface-100 transition-colors text-base">
-          Contact Us
-        </a>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       WHAT'S IN YOUR BOX — Warm surface, card features
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-24 md:py-32" style="background: oklch(0.985 0.006 72);">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10">
+      <div class="flex items-center gap-4 mb-4">
+        <span class="amber-rule"></span>
+        <span class="text-xs font-semibold tracking-[0.2em] uppercase" style="color: oklch(0.62 0.12 52); font-family: var(--font-body);">What's in your box</span>
+      </div>
+      <h2 class="font-display font-bold text-3xl md:text-5xl leading-tight mb-4 max-w-2xl" style="color: oklch(0.18 0.040 38);">
+        Everything a great café morning needs. Nothing it doesn't.
+      </h2>
+      <p class="text-lg leading-relaxed mb-16 max-w-xl" style="color: oklch(0.45 0.060 38); font-family: var(--font-body);">
+        Every Brewnest box is curated around a theme — a region, a roast profile, a café season — and arrives with everything you need to recreate it at home.
+      </p>
+
+      <!-- Feature grid — 4 cards, slight asymmetry -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1 -->
+        <div class="group p-7 rounded-sm border transition-all duration-200 hover:-translate-y-1 hover:shadow-lg" style="background: oklch(0.96 0.015 72); border-color: oklch(0.86 0.018 70);">
+          <div class="w-10 h-10 mb-5 flex items-center justify-center rounded-full" style="background: oklch(0.86 0.030 38);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="oklch(0.62 0.12 52)"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 0a7 7 0 1 0 7 7H5a7 7 0 0 0 7-7Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-2"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2" style="color: oklch(0.18 0.040 38);">Freshly Roasted Beans</h3>
+          <p class="text-sm leading-relaxed" style="color: oklch(0.45 0.060 38); font-family: var(--font-body);">Single-origin specialty coffee roasted within 48 hours of shipping — at peak flavor, always.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group p-7 rounded-sm border transition-all duration-200 hover:-translate-y-1 hover:shadow-lg" style="background: oklch(0.96 0.015 72); border-color: oklch(0.86 0.018 70);">
+          <div class="w-10 h-10 mb-5 flex items-center justify-center rounded-full" style="background: oklch(0.86 0.030 38);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="oklch(0.62 0.12 52)"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2" style="color: oklch(0.18 0.040 38);">Barista Brew Guides</h3>
+          <p class="text-sm leading-relaxed" style="color: oklch(0.45 0.060 38); font-family: var(--font-body);">Technique cards written by working baristas — grind settings, water temps, pour ratios — specific to your beans.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group p-7 rounded-sm border transition-all duration-200 hover:-translate-y-1 hover:shadow-lg" style="background: oklch(0.96 0.015 72); border-color: oklch(0.86 0.018 70);">
+          <div class="w-10 h-10 mb-5 flex items-center justify-center rounded-full" style="background: oklch(0.86 0.030 38);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="oklch(0.62 0.12 52)"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2" style="color: oklch(0.18 0.040 38);">Seasonal Café Recipes</h3>
+          <p class="text-sm leading-relaxed" style="color: oklch(0.45 0.060 38); font-family: var(--font-body);">A new café-style drink recipe each month — brown butter lattes, cardamom cortados, cold brew tonics — with exact measurements.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="group p-7 rounded-sm border transition-all duration-200 hover:-translate-y-1 hover:shadow-lg" style="background: oklch(0.96 0.015 72); border-color: oklch(0.86 0.018 70);">
+          <div class="w-10 h-10 mb-5 flex items-center justify-center rounded-full" style="background: oklch(0.86 0.030 38);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="oklch(0.62 0.12 52)"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2" style="color: oklch(0.18 0.040 38);">Roaster Origin Stories</h3>
+          <p class="text-sm leading-relaxed" style="color: oklch(0.45 0.060 38); font-family: var(--font-body);">Every bag comes with the story of where it's from — the farm, the region, the people who grew it. Coffee tastes better when you know it.</p>
+        </div>
+
       </div>
     </div>
   </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PULL QUOTE — Bold amber on dark espresso
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="noise-overlay relative overflow-hidden py-24 md:py-28" style="background: oklch(0.18 0.040 38);">
+    <div class="absolute inset-0" style="
+      background:
+        radial-gradient(ellipse 70% 80% at 90% 50%, oklch(0.62 0.12 52 / 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 10% 30%, oklch(0.45 0.08 42 / 0.10) 0%, transparent 55%);
+      pointer-events: none;
+    "></div>
+    <div class="relative max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 text-center" style="z-index:2;">
+      <p class="font-display italic font-medium text-3xl md:text-5xl leading-[1.3] mb-8" style="color: oklch(0.80 0.10 55);">
+        "I used to spend $280 a month at coffee shops without thinking about it. Now I spend $39 a month on Brewnest and get a better cup every single morning."
+      </p>
+      <span class="amber-rule mx-auto block"></span>
+      <p class="mt-5 text-sm font-medium tracking-wide" style="color: oklch(0.60 0.02 60); font-family: var(--font-body);">
+        Daniel R. &nbsp;·&nbsp; Remote product designer &nbsp;·&nbsp; Portland, OR
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SEASONAL RECIPE PREVIEW — Editorial card, warm cream
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-24 md:py-32" style="background: oklch(0.96 0.015 72);">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10">
+      <div class="flex items-center gap-4 mb-4">
+        <span class="amber-rule"></span>
+        <span class="text-xs font-semibold tracking-[0.2em] uppercase" style="color: oklch(0.62 0.12 52); font-family: var(--font-body);">This Month's Feature</span>
+      </div>
+
+      <!-- Asymmetric layout: large recipe card left, text right -->
+      <div class="grid md:grid-cols-[3fr_2fr] gap-10 md:gap-14 items-start">
+        <!-- Recipe card -->
+        <div class="rounded-sm overflow-hidden border" style="border-color: oklch(0.86 0.018 70);">
+          <!-- Gradient stand-in for hero coffee image -->
+          <div class="h-52 relative overflow-hidden" style="background: linear-gradient(145deg, oklch(0.22 0.048 40) 0%, oklch(0.38 0.080 46) 60%, oklch(0.62 0.12 52) 100%);">
+            <div class="absolute inset-0 flex items-end p-6">
+              <div>
+                <p class="text-xs font-semibold tracking-[0.18em] uppercase mb-1" style="color: oklch(0.72 0.12 52); font-family: var(--font-body);">Summer Recipe</p>
+                <h3 class="font-display font-bold text-2xl md:text-3xl" style="color: oklch(0.96 0.015 72);">Brown Butter Honey Latte</h3>
+              </div>
+            </div>
+          </div>
+          <!-- Recipe detail -->
+          <div class="p-7" style="background: oklch(0.985 0.006 72);">
+            <p class="text-base leading-relaxed mb-5" style="color: oklch(0.38 0.045 42); font-family: var(--font-body);">
+              Our take on a café-menu sleeper hit. Toasted brown butter syrup deepens the espresso's caramel notes. You'll make it every week.
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-3 text-sm" style="color: oklch(0.38 0.045 42); font-family: var(--font-body);">
+                <svg class="w-4 h-4 flex-shrink-0" style="color: oklch(0.62 0.12 52);" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Double-shot espresso or 40g AeroPress concentrate
+              </li>
+              <li class="flex items-center gap-3 text-sm" style="color: oklch(0.38 0.045 42); font-family: var(--font-body);">
+                <svg class="w-4 h-4 flex-shrink-0" style="color: oklch(0.62 0.12 52);" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Brown butter honey syrup (recipe included)
+              </li>
+              <li class="flex items-center gap-3 text-sm" style="color: oklch(0.38 0.045 42); font-family: var(--font-body);">
+                <svg class="w-4 h-4 flex-shrink-0" style="color: oklch(0.62 0.12 52);" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Steamed oat milk with micro-foam finish
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Recipe context text -->
+        <div class="md:pt-4">
+          <h2 class="font-display font-bold text-3xl md:text-4xl leading-tight mb-5" style="color: oklch(0.18 0.040 38);">
+            Every box opens with a new café recipe to make your own.
+          </h2>
+          <p class="text-base leading-relaxed mb-5" style="color: oklch(0.38 0.045 42); font-family: var(--font-body);">
+            We work with baristas at independent coffee shops across the country to bring their seasonal menu items into your kitchen. Each recipe is tested for home equipment — no $3,000 espresso machine required.
+          </p>
+          <p class="text-base leading-relaxed mb-8" style="color: oklch(0.38 0.045 42); font-family: var(--font-body);">
+            Past recipes: Cardamom cortado, Vietnamese iced coffee, Basque-style burnt milk cappuccino, Lavender cold brew tonic.
+          </p>
+          <a href="#join"
+             class="inline-block px-7 py-3.5 text-sm font-semibold transition-all duration-200 hover:opacity-90 rounded-sm"
+             style="background: oklch(0.18 0.040 38); color: oklch(0.96 0.015 72); font-family: var(--font-body);">
+            Get this month's box
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HOW IT WORKS — 3 steps, clean + warm
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="how-it-works" class="py-24 md:py-32" style="background: oklch(0.985 0.006 72);">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10">
+      <div class="flex items-center gap-4 mb-4">
+        <span class="amber-rule"></span>
+        <span class="text-xs font-semibold tracking-[0.2em] uppercase" style="color: oklch(0.62 0.12 52); font-family: var(--font-body);">How Brewnest works</span>
+      </div>
+      <h2 class="font-display font-bold text-3xl md:text-5xl leading-tight mb-16 max-w-xl" style="color: oklch(0.18 0.040 38);">
+        Your ritual in three steps.
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-0 md:gap-8">
+        <!-- Step 1 -->
+        <div class="relative pb-12 md:pb-0">
+          <!-- Connector line (desktop only) -->
+          <div class="hidden md:block absolute top-5 left-full w-full h-px" style="background: oklch(0.86 0.018 70);"></div>
+          <div class="flex items-center gap-4 mb-5">
+            <span class="font-display font-bold text-4xl leading-none" style="color: oklch(0.86 0.030 38);">01</span>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3" style="color: oklch(0.18 0.040 38);">Tell us your brew style</h3>
+          <p class="text-base leading-relaxed" style="color: oklch(0.45 0.060 38); font-family: var(--font-body);">
+            Espresso, pour-over, French press, or AeroPress — answer 4 quick questions and we match you with roast profiles you'll love.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative pb-12 md:pb-0 md:pl-8">
+          <div class="hidden md:block absolute top-5 left-full w-full h-px" style="background: oklch(0.86 0.018 70);"></div>
+          <div class="flex items-center gap-4 mb-5">
+            <span class="font-display font-bold text-4xl leading-none" style="color: oklch(0.86 0.030 38);">02</span>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3" style="color: oklch(0.18 0.040 38);">Your box ships fresh</h3>
+          <p class="text-base leading-relaxed" style="color: oklch(0.45 0.060 38); font-family: var(--font-body);">
+            Roasted to order and shipped within 48 hours, your Brewnest box arrives on a schedule you choose — weekly, bi-weekly, or monthly.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative md:pl-8">
+          <div class="flex items-center gap-4 mb-5">
+            <span class="font-display font-bold text-4xl leading-none" style="color: oklch(0.86 0.030 38);">03</span>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3" style="color: oklch(0.18 0.040 38);">Make your café moment</h3>
+          <p class="text-base leading-relaxed" style="color: oklch(0.45 0.060 38); font-family: var(--font-body);">
+            Follow the barista guide, try the seasonal recipe, and take ten minutes that are entirely yours. That's the ritual.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TESTIMONIALS — Warm cream, editorial style
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-24 md:py-32" style="background: oklch(0.96 0.015 72);">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10">
+      <div class="flex items-center gap-4 mb-4">
+        <span class="amber-rule"></span>
+        <span class="text-xs font-semibold tracking-[0.2em] uppercase" style="color: oklch(0.62 0.12 52); font-family: var(--font-body);">Member stories</span>
+      </div>
+      <h2 class="font-display font-bold text-3xl md:text-5xl leading-tight mb-14" style="color: oklch(0.18 0.040 38);">
+        4,200 mornings, reimagined.
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="p-7 rounded-sm border" style="background: oklch(0.985 0.006 72); border-color: oklch(0.86 0.018 70);">
+          <div class="flex gap-0.5 mb-4">
+            <span style="color: oklch(0.62 0.12 52);" class="text-sm">★★★★★</span>
+          </div>
+          <p class="font-display italic text-base leading-relaxed mb-5" style="color: oklch(0.28 0.030 38);">
+            "I've tried every coffee subscription. None of them felt like a café experience until this. The brew guide alone is worth it."
+          </p>
+          <div>
+            <p class="text-sm font-semibold" style="color: oklch(0.18 0.040 38); font-family: var(--font-body);">Sarah K.</p>
+            <p class="text-xs mt-0.5" style="color: oklch(0.55 0.02 60); font-family: var(--font-body);">UX designer · Chicago, IL</p>
+          </div>
+        </div>
+
+        <div class="p-7 rounded-sm border" style="background: oklch(0.985 0.006 72); border-color: oklch(0.86 0.018 70);">
+          <div class="flex gap-0.5 mb-4">
+            <span style="color: oklch(0.62 0.12 52);" class="text-sm">★★★★★</span>
+          </div>
+          <p class="font-display italic text-base leading-relaxed mb-5" style="color: oklch(0.28 0.030 38);">
+            "The cardamom cortado recipe from January is still in my weekly rotation. My coworkers think I hired a barista."
+          </p>
+          <div>
+            <p class="text-sm font-semibold" style="color: oklch(0.18 0.040 38); font-family: var(--font-body);">Marcus L.</p>
+            <p class="text-xs mt-0.5" style="color: oklch(0.55 0.02 60); font-family: var(--font-body);">Software engineer · Austin, TX</p>
+          </div>
+        </div>
+
+        <div class="p-7 rounded-sm border" style="background: oklch(0.985 0.006 72); border-color: oklch(0.86 0.018 70);">
+          <div class="flex gap-0.5 mb-4">
+            <span style="color: oklch(0.62 0.12 52);" class="text-sm">★★★★★</span>
+          </div>
+          <p class="font-display italic text-base leading-relaxed mb-5" style="color: oklch(0.28 0.030 38);">
+            "Went from spending $7 a day at the coffee shop to spending 10 minutes making something better. My wallet and my mornings are both better."
+          </p>
+          <div>
+            <p class="text-sm font-semibold" style="color: oklch(0.18 0.040 38); font-family: var(--font-body);">Priya M.</p>
+            <p class="text-xs mt-0.5" style="color: oklch(0.55 0.02 60); font-family: var(--font-body);">Marketing director · Seattle, WA</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       JOIN CTA — Dark espresso, amber CTA, warm glow
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="join" class="noise-overlay relative overflow-hidden py-28 md:py-36" style="background: oklch(0.14 0.038 36);">
+    <div class="absolute inset-0" style="
+      background:
+        radial-gradient(ellipse 65% 70% at 20% 60%, oklch(0.45 0.080 46 / 0.20) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 80% 30%, oklch(0.62 0.12 52 / 0.14) 0%, transparent 55%);
+      pointer-events: none;
+    "></div>
+    <div class="relative max-w-3xl mx-auto px-6 sm:px-8 lg:px-10 text-center" style="z-index:2;">
+      <!-- Small cup icon -->
+      <div class="mx-auto mb-8 w-12 h-12 flex items-center justify-center rounded-full" style="background: oklch(0.62 0.12 52 / 0.15); border: 1px solid oklch(0.62 0.12 52 / 0.3);">
+        <svg class="w-6 h-6" style="color: oklch(0.72 0.12 52);" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/>
+        </svg>
+      </div>
+
+      <h2 class="font-display font-bold text-4xl md:text-6xl leading-[1.08] mb-6 tracking-tight" style="color: oklch(0.96 0.015 72);">
+        Your café morning starts <em style="color: oklch(0.80 0.10 55);">next week.</em>
+      </h2>
+      <p class="text-lg md:text-xl leading-relaxed mb-10 font-light" style="color: oklch(0.70 0.015 70); font-family: var(--font-body);">
+        First box ships in 3–5 days. Pause or cancel anytime — no fees, no questions.
+      </p>
+
+      <!-- Pricing highlight -->
+      <div class="inline-flex flex-col items-center gap-6 mb-10">
+        <div class="px-8 py-6 rounded-sm border text-center" style="background: oklch(0.18 0.040 38 / 0.6); border-color: oklch(0.62 0.12 52 / 0.3);">
+          <p class="text-xs font-semibold tracking-[0.18em] uppercase mb-2" style="color: oklch(0.62 0.12 52); font-family: var(--font-body);">Monthly membership</p>
+          <p class="font-display font-bold text-5xl mb-1" style="color: oklch(0.96 0.015 72);">$39</p>
+          <p class="text-sm" style="color: oklch(0.60 0.02 60); font-family: var(--font-body);">per month · free shipping · cancel anytime</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#join"
+           class="inline-block px-10 py-4 font-semibold text-base rounded-sm transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
+           style="background: oklch(0.62 0.12 52); color: oklch(0.12 0.035 35); font-family: var(--font-body);">
+          Start my first box →
+        </a>
+        <p class="text-sm" style="color: oklch(0.50 0.02 60); font-family: var(--font-body);">
+          No credit card required to browse.
+        </p>
+      </div>
+
+      <!-- Trust line -->
+      <p class="mt-10 text-xs tracking-wide" style="color: oklch(0.42 0.02 55); font-family: var(--font-body);">
+        Shipped from independent US roasters · 48-hour freshness guarantee · USPS Priority delivery
+      </p>
+    </div>
+  </section>
+
 </Base>

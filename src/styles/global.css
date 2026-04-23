@@ -1,57 +1,109 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&family=Source+Sans+3:wght@300;400;600&display=swap');
 
 /* -----------------------------------------------------------------------
-   Design Tokens — customize these to change the entire site's look.
-   The Product Agent should edit this @theme block to match the business:
-   - Swap fonts (Google Fonts @import above, font families below)
-   - Change brand colors to match the business personality
-   - Flip surface colors for dark theme (swap light/dark values)
+   Design Tokens — Brewnest
+   Warm-luxurious café editorial aesthetic
+   Espresso brown primary, amber accent, cream linen surfaces
    ----------------------------------------------------------------------- */
 
 @theme {
-  /* Typography — replace with distinctive Google Fonts for the business */
-  --font-display: ui-sans-serif, system-ui, sans-serif;
-  --font-body: ui-sans-serif, system-ui, sans-serif;
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
 
-  /* Brand color scale — agent should customize per business */
-  --color-brand-50: oklch(0.97 0.01 250);
-  --color-brand-100: oklch(0.93 0.02 250);
-  --color-brand-200: oklch(0.87 0.04 250);
-  --color-brand-400: oklch(0.70 0.12 250);
-  --color-brand-500: oklch(0.60 0.16 250);
-  --color-brand-600: oklch(0.50 0.16 250);
+  /* Brand color scale — deep espresso brown */
+  --color-brand-50:  oklch(0.97 0.008 38);
+  --color-brand-100: oklch(0.93 0.016 38);
+  --color-brand-200: oklch(0.86 0.030 38);
+  --color-brand-400: oklch(0.45 0.060 38);
+  --color-brand-500: oklch(0.30 0.065 38);
+  --color-brand-600: oklch(0.18 0.040 38);
 
-  /* Surface colors — light theme defaults. Flip for dark theme:
-     surface-50 becomes near-black, surface-900 becomes near-white */
-  --color-surface-50: oklch(0.985 0.002 250);
-  --color-surface-100: oklch(0.96 0.004 250);
-  --color-surface-200: oklch(0.92 0.006 250);
-  --color-surface-800: oklch(0.30 0.015 250);
-  --color-surface-900: oklch(0.20 0.015 250);
-  --color-surface-950: oklch(0.14 0.012 250);
+  /* Accent — warm amber/caramel */
+  --color-accent-300: oklch(0.80 0.10 55);
+  --color-accent-400: oklch(0.72 0.12 52);
+  --color-accent-500: oklch(0.62 0.12 52);
+  --color-accent-600: oklch(0.52 0.11 50);
+
+  /* Surface — warm cream/linen (light theme) */
+  --color-surface-50:  oklch(0.985 0.006 72);
+  --color-surface-100: oklch(0.96 0.015 72);
+  --color-surface-200: oklch(0.92 0.018 70);
+  --color-surface-300: oklch(0.86 0.018 68);
+  --color-surface-800: oklch(0.28 0.030 38);
+  --color-surface-900: oklch(0.18 0.040 38);
+  --color-surface-950: oklch(0.12 0.035 35);
 }
 
-/* Page-load animations — CSS only, no JS required */
+/* Page-load animations — CSS only */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out both;
+@keyframes fadeInSlow {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.animate-slide-up {
-  animation: slideUp 0.6s ease-out both;
+@keyframes steamRise {
+  0%   { opacity: 0; transform: translateY(0) scaleX(1); }
+  40%  { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(-40px) scaleX(1.5); }
 }
 
-/* Staggered animation delays for cascading reveals */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
+.animate-fade-in      { animation: fadeIn 0.7s ease-out both; }
+.animate-fade-in-slow { animation: fadeInSlow 1.2s ease-out both; }
+.animate-slide-up     { animation: slideUp 0.7s ease-out both; }
+.animate-steam        { animation: steamRise 3s ease-out infinite; }
+
+/* Staggered delays */
+.delay-100 { animation-delay: 0.10s; }
+.delay-200 { animation-delay: 0.20s; }
+.delay-300 { animation-delay: 0.30s; }
+.delay-400 { animation-delay: 0.40s; }
+.delay-500 { animation-delay: 0.50s; }
+.delay-600 { animation-delay: 0.60s; }
+.delay-700 { animation-delay: 0.70s; }
+.delay-800 { animation-delay: 0.80s; }
+
+/* Noise texture utility */
+.noise-overlay {
+  position: relative;
+}
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Decorative amber rule */
+.amber-rule {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: oklch(0.62 0.12 52);
+}
+
+/* Drop cap for story section */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 0.8;
+  margin-right: 0.12em;
+  margin-top: 0.08em;
+  color: oklch(0.62 0.12 52);
+}
